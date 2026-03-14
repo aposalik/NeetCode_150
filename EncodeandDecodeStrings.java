@@ -10,10 +10,21 @@ class Solution {
     }
 
     public List<String> decode(String str) {
-        List<String> result;
-        for(int i=0 ; i<str.length(); i++){
-            if()
-        } 
+        List<String> result = new ArrayList<>();
+
+        int i=0;
+        while(i < str.length()){
+            // Find the #
+            int j = str.indexOf("#",i);
+            int len = Integer.parseInt(str.substring(i,j));
+
+            String word = str.substring(j+1,j+1+len);
+            result.add(word);
+
+            i = j+1+len;
+    
+        }
+        return result;
 
         }
 }
