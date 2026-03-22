@@ -20,7 +20,7 @@ class Solution {
                 String nums = String.valueOf(board[i][j]);
 
                 if(!rows[i].add(nums)) return false;
-                if(!cols[i].add(nums)) return false;
+                if(!cols[j].add(nums)) return false;
                 if(!boxes[box].add(nums)) return false;
             }
         }
